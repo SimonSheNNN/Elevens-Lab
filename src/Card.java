@@ -4,6 +4,7 @@
  * <code>Card</code> represents a playing card.
  */
 public class Card {
+	
 
 	/**
 	 * String value that holds the suit of the card
@@ -43,7 +44,7 @@ public class Card {
 	 */
 	public String suit() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return suit;
+		return this.suit;
    }
 
 	/**
@@ -52,7 +53,7 @@ public class Card {
 	 */
 	public String rank() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return rank;
+		return this. rank;
 	}
 
    /**
@@ -61,7 +62,7 @@ public class Card {
 	 */
 	public int pointValue() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return pointValue;
+		return this. pointValue;
 	}
 
 	/** Compare this card with the argument.
@@ -72,7 +73,7 @@ public class Card {
 	 */
 	public boolean matches(Card otherCard) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		if (this.suit==otherCard.suit && this.rank==otherCard.rank && this.pointValue == otherCard.pointValue) {
+		if (this.suit==otherCard.suit && this.rank==otherCard.rank &&this.pointValue == otherCard.pointValue) {
 	        return true;
 	    }
 		else {

@@ -44,7 +44,7 @@ public class Card {
 	 */
 	public String suit() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return this.suit;
+		return suit;
    }
 
 	/**
@@ -53,7 +53,7 @@ public class Card {
 	 */
 	public String rank() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return this. rank;
+		return rank;
 	}
 
    /**
@@ -62,7 +62,7 @@ public class Card {
 	 */
 	public int pointValue() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		return this. pointValue;
+		return  pointValue;
 	}
 
 	/** Compare this card with the argument.

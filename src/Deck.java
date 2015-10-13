@@ -35,7 +35,8 @@ public class Deck {
             for (String suitString : suits){
                 cards.add(new Card(ranks[j], suitString, values[j]));
             }
-	}}
+        }
+	}
 
 
 	/**
@@ -75,9 +76,11 @@ public class Deck {
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
         // IS EMPTY if so return null
-        size--;
+       
         Card c = cards.get(size);
+        size--;
         return c;
+      
 	}
 
 	/**

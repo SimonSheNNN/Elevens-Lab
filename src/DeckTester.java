@@ -29,8 +29,5 @@ public class DeckTester {
 		
 		
 		
-		
-		System.out.println("push to github");
-		
 	}
 }

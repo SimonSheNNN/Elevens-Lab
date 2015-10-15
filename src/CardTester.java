@@ -8,7 +8,7 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+		
 		
 		Card fiveJack= new Card("5","jack",5);
 		Card kingHeart1= new Card("king","heart",13);

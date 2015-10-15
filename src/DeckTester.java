@@ -26,5 +26,11 @@ public class DeckTester {
 		int[] value3 = {5, 8, 13};
 		Deck deck3 = new Deck(rank3, suit3, value3);
 		System.out.println("Deck3 dealt card is: " + deck3.deal());
+		
+		
+		
+		
+		System.out.println("push to github");
+		
 	}
 }

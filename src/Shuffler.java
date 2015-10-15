@@ -8,8 +8,7 @@ public class Shuffler {
 	 * to each sorting procedure.
 	 */
 	private static final int SHUFFLE_COUNT = 5;
-	private static final int decksize=4;
-
+	
 	/**
 	 * Tests shuffling methods.
 	 * @param args is not used.
@@ -50,14 +49,24 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-		 	int[] half1 = new int[ decksize / 2 ];
-	        int[] half2 = new int[ decksize - decksize / 2 ];
-
+		 	int half = values.length /2;
+		 	
+		 	for(int i=0; i<half; i++){
+		 		
+		 	}
+		 	
+		 	for(int i=0; i<half; i+=2){
+		 		
+		 	}
+		 	
+	       
+	        
+	        
 	}
 
 	
 	public static void selectionShuffle(int[] values) {
-		 for( int b = decksize  - 1; b >= 0; b-- ) {
+		 for( int b = values.length  - 1; b >= 0; b-- ) {
 		        int a = (int)(Math.random() * b);
 		        int store = values[a];
 		        values[a] = values[b];

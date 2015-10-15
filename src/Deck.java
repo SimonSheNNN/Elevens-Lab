@@ -19,6 +19,7 @@ public class Deck {
 	 * The next card to be dealt is at size - 1.
 	 */
 	private int size;
+	
 
 
 	/**
@@ -36,6 +37,7 @@ public class Deck {
                 cards.add(new Card(ranks[j], suitString, values[j]));
             }
         }
+        size=cards.size();
 	}
 
 
@@ -74,16 +76,14 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		if (this.cards.size()!=0) {
-			 Card c = cards.get(size);
-		     size--;
-		     return c;
+		if (this.cards.size() !=0) {
+			size--;
+			Card c = cards.get(size);
+		    return c;
 		}
 		else{
 			return null;
 		}
-      
-      
 	}
 
 	/**

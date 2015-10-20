@@ -7,7 +7,7 @@ public class Shuffler {
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 5;
+	private static final int SHUFFLE_COUNT = 8;
 	
 	/**
 	 * Tests shuffling methods.
@@ -47,26 +47,32 @@ public class Shuffler {
 	 * The perfect shuffle algorithm splits the deck in half, then interleaves
 	 * the cards in one half with the cards in the other.
 	 * @param values is an array of integers simulating cards to be shuffled.
-	 */
+    */
+	
 	public static void perfectShuffle(int[] values) {
-		 	int half = values.length /2;
-		 	
-		 	for(int i=0; i<half; i++){
-		 		
-		 	}
-		 	
-		 	for(int i=0; i<half; i+=2){
-		 		
-		 	}
-		 	
-	       
-	        
-	        
-	}
+        int[] temp = new int[values.length];
+        
+      int  x=1;
+        for( int i = 0; i < (values.length / 2); i++ ) {
+            temp[x] = values[i];
+            x=x+2;
+        }
+        
+        x=0;
+        for( int i = values.length / 2; i < values.length; i++ ) {
+            temp[x] = values[ i];
+            x=x+2;
+        }
+//TRANSFER
+        for( int i = 0; i<values.length; i++ ) {
+          values[i]=temp[i];
+        }
+    }
 
 	
+	
 	public static void selectionShuffle(int[] values) {
-		 for( int b = values.length  - 1; b >= 0; b-- ) {
+		 for( int b = values.length - 1; b >= 0; b-- ) {
 		        int a = (int)(Math.random() * b);
 		        int store = values[a];
 		        values[a] = values[b];

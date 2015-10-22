@@ -27,7 +27,11 @@ public class DeckTester {
 		Deck deck3 = new Deck(rank3, suit3, value3);
 		System.out.println("Deck3 dealt card is: " + deck3.deal());
 		
-		
-		
+		String[] rank4 = {"1","2","3","4","5","6","7"," 8","9","10","jack","queen","king"};
+		String[] suit4 = {"Hearts", "Spades", "Diamonds","club"};
+		int[] value4 = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+		Deck deck4 = new Deck(rank4, suit4, value4);
+		deck4.shuffle();
+		System.out.println(deck4.toString());
 	}
 }

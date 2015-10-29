@@ -31,12 +31,14 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-        cards = new ArrayList<Card>();
+        assert values.length==ranks.length:"your rank is not the smae as your values";
+		cards = new ArrayList<Card>();
         for (int j = 0; j < ranks.length; j++) {
             for (String suitString : suits){
                 cards.add(new Card(ranks[j], suitString, values[j]));
             }
         }
+  
         size=cards.size();
 	}
 
@@ -48,6 +50,7 @@ public class Deck {
 	public boolean isEmpty() {
 		
 		if(this.cards.size()==0){
+			assert this.size!=0: "deck is not empty!";
 			return true;
 		}
 		return false;
@@ -69,11 +72,16 @@ public class Deck {
 	public void shuffle() {
 		 for( int b = this.size() - 1; b >= 0; b-- ) {
 		        int a = (int)(Math.random() * b);
+		        assert a<=b:"the deck is trying to shuffle the shuffled";
 		        Card tem = cards.get(a);
 	            cards.set(a, cards.get(b));
 	            cards.set(b, tem);
 		 }
+		 size=cards.size();
+		 
 	}
+	
+	
 
 	/**
 	 * Deals a card from this deck.
@@ -82,11 +90,13 @@ public class Deck {
 	 */
 	public Card deal() {
 		if (this.cards.size() !=0) {
+			assert this.size>0: "the deck is not actually empty";
 			size--;
 			Card c = cards.get(size);
 		    return c;
 		}
 		else{
+			assert this.size==0: "the deck is actually empty";
 			return null;
 		}
 	}

@@ -8,7 +8,6 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		String[] rank1 = {"Jack", "Queen", "King"};
 		String[] suit1 = {"Hearts", "Spades", "Diamonds"};
 		int[] value1 = {11, 12, 13};
@@ -32,6 +31,32 @@ public class DeckTester {
 		int[] value4 = {1,2,3,4,5,6,7,8,9,10,11,12,13};
 		Deck deck4 = new Deck(rank4, suit4, value4);
 		deck4.shuffle();
-		System.out.println(deck4.toString());
+		System.out.println("Deck3 dealt card is: " + deck4.deal());
+		
+		
+		int[] value5 = {18, 14, 11, 13, 12};
+		int[] value6 = {11, 12, 13, 14, 18};
+		
+		System.out.println(arePermutations(value5, value6));
+		
 	}
+	
+	public static boolean arePermutations(int[] a, int[] b){
+	    for(int i = 0; i < a.length; i++){
+	        boolean test1 = false;
+	        for(int k = 0; k < b.length; k++){
+	            if(a[i] == b[k]){
+	                test1 = true;
+	            }
+	        }
+	        if(test1){
+	            return true;
+	        }
+
+	    }
+	    return false;
+	}
+	
+	
 }
+
